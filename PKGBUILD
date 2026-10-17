@@ -5,7 +5,7 @@ pkgrel=1
 pkgdesc="Minimal rainbow-gradient status bar for niri, built on Quickshell"
 arch=('any')
 url="https://github.com/eqeka/iris-bar"
-license=('MIT')
+license=('GPL-3.0-or-later')
 depends=('quickshell' 'lm_sensors' 'brightnessctl' 'wireplumber')
 optdepends=('niri: keyboard layout indicator'
             'nvidia-utils: GPU usage reporting via nvidia-smi')

@@ -77,4 +77,4 @@ Internally it runs three independent loops so nothing blocks anything else:
 
 ## License
 
-MIT
+GPL-3.0-or-later
