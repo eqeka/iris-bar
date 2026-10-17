@@ -67,12 +67,12 @@ ShellRoot {
                 height: clipper.height
                 gradient: Gradient {
                     orientation: Gradient.Horizontal
-                    GradientStop { position: 0.0; color: "#ff0000" }
-                    GradientStop { position: 0.2; color: "#ff9900" }
-                    GradientStop { position: 0.4; color: "#ffee00" }
-                    GradientStop { position: 0.6; color: "#33ff00" }
-                    GradientStop { position: 0.8; color: "#00ccff" }
-                    GradientStop { position: 1.0; color: "#6600ff" }
+                    GradientStop { position: 0.0; color: "#6600ff" }
+                    GradientStop { position: 0.2; color: "#00ccff" }
+                    GradientStop { position: 0.4; color: "#33ff00" }
+                    GradientStop { position: 0.6; color: "#ffee00" }
+                    GradientStop { position: 0.8; color: "#ff9900" }
+                    GradientStop { position: 1.0; color: "#ff0000" }
                 }
             }
         }
