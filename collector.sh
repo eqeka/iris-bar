@@ -165,7 +165,7 @@ while true; do
     life_days_total=$(( ( $(date -d "$BIRTH_DATE +$LIFE_EXPECTANCY_YEARS years" +%s) - $(date -d "$BIRTH_DATE" +%s) ) / 86400 ))
     life_days_lived=$(( ( $(date +%s) - $(date -d "$BIRTH_DATE" +%s) ) / 86400 ))
     life_pct=$(awk -v d=$life_days_lived -v t=$life_days_total 'BEGIN{v=d/t*100; if(v<0)v=0; if(v>100)v=100; printf "%.2f", v}')
-    life_label="${life_days_lived}/${life_days_total}"
+    life_label="LIFE ${life_days_lived}/${life_days_total}"
   else
     life_pct=0
     life_label=""
