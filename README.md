@@ -10,6 +10,10 @@ Every stat — CPU, GPU, RAM, swap, disk, network, screen brightness, volume, mi
 
 There's also an optional memento mori bar — days lived / expected total days, based on a birth date and an expectancy-in-years you set yourself. Off by default; set `BIRTH_DATE` in `config.sh` to enable it.
 
+also snuck in a little easter egg shows how much of my life ive lived out of average life expectancy
+
+![life widget](life-widget.png)
+
 - Toggles on/off with a keybind (no permanent screen real estate unless you want it)
 - Reserves screen space when shown (`exclusiveZone`), doesn't just overlay on top of windows
 - Fast-reacting: volume/brightness/keyboard-layout changes show up in ~0.3s, not seconds later
