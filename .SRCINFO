@@ -1,0 +1,20 @@
+pkgbase = iris-bar-git
+	pkgdesc = Minimal rainbow-gradient status bar for niri, built on Quickshell
+	pkgver = r1.0000000
+	pkgrel = 1
+	url = https://github.com/eqeka/iris-bar
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = quickshell
+	depends = lm_sensors
+	depends = brightnessctl
+	depends = wireplumber
+	optdepends = niri: keyboard layout indicator
+	optdepends = nvidia-utils: GPU usage reporting via nvidia-smi
+	provides = iris-bar
+	conflicts = iris-bar
+	source = iris-bar-git::git+https://github.com/eqeka/iris-bar.git
+	sha256sums = SKIP
+
+pkgname = iris-bar-git
