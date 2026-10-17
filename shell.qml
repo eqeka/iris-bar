@@ -133,6 +133,11 @@ ShellRoot {
             StatBar { value: barData.minute_pct ?? 0; label: barData.minute_num ?? "" }
             InfoBox { label: barData.month_name ?? "" }
             InfoBox { label: barData.day_name ?? "" }
+            StatBar {
+                visible: (barData.life_label ?? "") !== ""
+                value: barData.life_pct ?? 0
+                label: barData.life_label ?? ""
+            }
         }
 
         Row {

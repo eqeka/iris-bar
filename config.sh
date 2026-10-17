@@ -26,3 +26,10 @@ GPU_TEMP_LABEL=""
 # gpu_busy_percent), or "" to auto-try nvidia first, then amdgpu, then give
 # up and show "N/A".
 GPU_MODE=""
+
+# Optional "life progress" bar — days lived / expected total days, as a
+# memento mori. Entirely personal, off by default. Leave BIRTH_DATE empty
+# to disable the widget completely (it just won't appear).
+# Format: YYYY-MM-DD
+BIRTH_DATE=""
+LIFE_EXPECTANCY_YEARS=75

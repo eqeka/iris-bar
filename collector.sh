@@ -161,8 +161,18 @@ while true; do
   month_name=${months_ru[$((month-1))]}
   day_name=${days_ru[$wday]}
 
-  date_json=$(printf '"year_pct":%s,"month_pct":%s,"day_pct":%s,"hour_pct":%s,"minute_pct":%s,"year_num":"%s","month_num":"%s","day_num":"%s","hour_num":"%s","minute_num":"%s","month_name":"%s","day_name":"%s"' \
-    "$year_pct" "$month_pct" "$day_pct" "$hour_pct" "$minute_pct" "$year_num" "$month_num" "$day_num" "$hour_num" "$minute_num" "$month_name" "$day_name")
+  if [ -n "$BIRTH_DATE" ]; then
+    life_days_total=$(( ( $(date -d "$BIRTH_DATE +$LIFE_EXPECTANCY_YEARS years" +%s) - $(date -d "$BIRTH_DATE" +%s) ) / 86400 ))
+    life_days_lived=$(( ( $(date +%s) - $(date -d "$BIRTH_DATE" +%s) ) / 86400 ))
+    life_pct=$(awk -v d=$life_days_lived -v t=$life_days_total 'BEGIN{v=d/t*100; if(v<0)v=0; if(v>100)v=100; printf "%.2f", v}')
+    life_label="${life_days_lived}/${life_days_total}"
+  else
+    life_pct=0
+    life_label=""
+  fi
+
+  date_json=$(printf '"year_pct":%s,"month_pct":%s,"day_pct":%s,"hour_pct":%s,"minute_pct":%s,"year_num":"%s","month_num":"%s","day_num":"%s","hour_num":"%s","minute_num":"%s","month_name":"%s","day_name":"%s","life_pct":%s,"life_label":"%s"' \
+    "$year_pct" "$month_pct" "$day_pct" "$hour_pct" "$minute_pct" "$year_num" "$month_num" "$day_num" "$hour_num" "$minute_num" "$month_name" "$day_name" "$life_pct" "$life_label")
 
   cpu_net_json=$(cat "$CPU_NET_CACHE" 2>/dev/null); cpu_net_json=${cpu_net_json#\{}; cpu_net_json=${cpu_net_json%\}}
   fast_json=$(cat "$FAST_CACHE" 2>/dev/null); fast_json=${fast_json#\{}; fast_json=${fast_json%\}}

@@ -8,6 +8,8 @@ A minimal, toggleable status bar for [niri](https://github.com/YaLTeR/niri), bui
 
 Every stat — CPU, GPU, RAM, swap, disk, network, screen brightness, volume, mic, and even the date/time (year/month/day/hour/minute, each as % elapsed through that unit) — is rendered as a horizontal bar on a black background. The fill is a rainbow gradient fixed to position across the full bar width, so the progress reveals more of the same gradient rather than stretching it. The value is overlaid as white text on a small black backdrop.
 
+There's also an optional memento mori bar — days lived / expected total days, based on a birth date and an expectancy-in-years you set yourself. Off by default; set `BIRTH_DATE` in `config.sh` to enable it.
+
 - Toggles on/off with a keybind (no permanent screen real estate unless you want it)
 - Reserves screen space when shown (`exclusiveZone`), doesn't just overlay on top of windows
 - Fast-reacting: volume/brightness/keyboard-layout changes show up in ~0.3s, not seconds later
