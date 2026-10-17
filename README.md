@@ -1,6 +1,6 @@
 # iris-bar
 
-A minimal, toggleable status bar for [niri](https://github.com/YaLTeR/niri), built on [Quickshell](https://quickshell.outfoxxed.me/). Named after Iris, the Greek goddess of the rainbow.
+A minimal, toggleable status bar for [niri](https://github.com/YaLTeR/niri), built on [Quickshell](https://quickshell.outfoxxed.me/).
 
 ![iris-bar screenshot](screenshot.png)
 
