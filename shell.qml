@@ -4,7 +4,7 @@ import Quickshell.Io
 
 ShellRoot {
     id: root
-    property bool barVisible: false
+    property bool barVisible: true
     property var barData: ({})
 
     Process {
